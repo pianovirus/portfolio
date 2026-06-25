@@ -104,22 +104,26 @@
         태블릿 / POS / 네이버 커넥트 / 모바일 멀티 디바이스 UI · 외부 SCM 양방향 통신 · 운영까지 직접 구현했습니다.
       </p>
 
-      <!-- 핵심 4 카드 (컬러풀) -->
-      <div class="mt-8 grid grid-cols-2 md:grid-cols-4 gap-3">
+      <!-- 핵심 5 카드 (컬러풀) -->
+      <div class="mt-8 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3">
         <div class="bg-indigo-50 border-2 border-indigo-200 rounded-2xl p-4">
-          <div class="text-xl font-extrabold text-indigo-900 mb-1">공공 데이터</div>
+          <div class="text-lg font-extrabold text-indigo-900 mb-1">공공 데이터</div>
           <div class="text-[11px] text-indigo-700 leading-relaxed">식약처·식품안전나라·PubMed·FDA·보건복지부·심평원 <b>7종</b></div>
         </div>
         <div class="bg-amber-50 border-2 border-amber-200 rounded-2xl p-4">
-          <div class="text-xl font-extrabold text-amber-900 mb-1">LLM Fallback</div>
-          <div class="text-[11px] text-amber-700 leading-relaxed">Gemini → OpenAI → Grok · <b>3-provider</b> 자동 전환</div>
+          <div class="text-lg font-extrabold text-amber-900 mb-1">토큰 효율</div>
+          <div class="text-[11px] text-amber-700 leading-relaxed">Gemini Flash 1차 · <b>5분 캐시</b> (4-call→LLM 1회) · 장애 시만 fallback</div>
+        </div>
+        <div class="bg-violet-50 border-2 border-violet-200 rounded-2xl p-4">
+          <div class="text-lg font-extrabold text-violet-900 mb-1">AI Agent · MCP</div>
+          <div class="text-[11px] text-violet-700 leading-relaxed">BioMCP · Medical MCP <b>tool-use</b> 패턴 · 외부 의료 도구 직접 호출</div>
         </div>
         <div class="bg-emerald-50 border-2 border-emerald-200 rounded-2xl p-4">
-          <div class="text-xl font-extrabold text-emerald-900 mb-1">4단계 검증</div>
+          <div class="text-lg font-extrabold text-emerald-900 mb-1">4단계 검증</div>
           <div class="text-[11px] text-emerald-700 leading-relaxed">PubMed·KFDA·FDA·LLM <b>다수결</b> · DOI 환각 차단</div>
         </div>
         <div class="bg-pink-50 border-2 border-pink-200 rounded-2xl p-4">
-          <div class="text-xl font-extrabold text-pink-900 mb-1">멀티 디바이스</div>
+          <div class="text-lg font-extrabold text-pink-900 mb-1">멀티 디바이스</div>
           <div class="text-[11px] text-pink-700 leading-relaxed">태블릿·POS·네이버·모바일 <b>4종</b> + 실시간 push</div>
         </div>
       </div>
