@@ -14,6 +14,22 @@
 ![MCP](https://img.shields.io/badge/MCP-BioMCP%20·%20Medical-8b5cf6?style=for-the-badge)
 ![Status](https://img.shields.io/badge/Status-Production-10b981?style=for-the-badge)
 
+</div>
+
+---
+
+## 🏗 시스템 아키텍처 한눈에 보기
+
+> **처방약 + 영양 성분 지식 → 약국이 판매하는 안전한 영양제 추천 · LLM Fallback + 4단계 교차 검증**
+
+![System Architecture](./system_architecture.png)
+
+📥 [고해상도 PDF 다운로드](https://github.com/pianovirus/portfolio/raw/main/aipharm-portfolio/system_architecture.pdf) · 🖼 [PNG 원본](https://github.com/pianovirus/portfolio/raw/main/aipharm-portfolio/system_architecture.png)
+
+---
+
+<div align="center">
+
 ![Hero Preview](./portfolio_hero.png)
 
 </div>
@@ -171,8 +187,8 @@ Gemini 429(quota) → OpenAI → Grok 순으로 자동 전환.
 
 ## 📑 자세히 보기
 
-- 🌐 [HTML 버전](./portfolio.html)
-- 📄 [PDF 버전](./portfolio.pdf)
+- 🌐 [HTML 버전 다운로드](https://github.com/pianovirus/portfolio/raw/main/aipharm-portfolio/portfolio.html)
+- 📄 [PDF 버전 다운로드](https://github.com/pianovirus/portfolio/raw/main/aipharm-portfolio/portfolio.pdf)
 
 <details>
 <summary>📸 전체 페이지 미리보기 (펼치기)</summary>
