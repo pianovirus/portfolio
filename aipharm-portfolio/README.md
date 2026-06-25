@@ -189,6 +189,7 @@ Gemini 429(quota) → OpenAI → Grok 순으로 자동 전환.
 
 - 🌐 [HTML 버전 다운로드](https://github.com/pianovirus/portfolio/raw/main/aipharm-portfolio/portfolio.html)
 - 📄 [PDF 버전 다운로드](https://github.com/pianovirus/portfolio/raw/main/aipharm-portfolio/portfolio.pdf)
+- 📑 [PDF v2 — LAYER 카드 제거 비교본](https://github.com/pianovirus/portfolio/raw/main/aipharm-portfolio/portfolio_v2.pdf) <sub>(원본과 비교용, 미확정)</sub>
 
 <details>
 <summary>📸 전체 페이지 미리보기 (펼치기)</summary>
