@@ -48,10 +48,10 @@
   .btn-ghost:hover{background:rgba(255,255,255,.08)}
 
   /* ===== Stat strip ===== */
-  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:54px}
-  .stat{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:18px 20px}
-  .stat .n{font-size:26px;font-weight:800;color:#fff}
-  .stat .l{font-size:12.5px;color:#9fb3d6;margin-top:3px}
+  .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:34px}
+  .stat{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:13px;padding:12px 16px}
+  .stat .n{font-size:20px;font-weight:800;color:#fff;white-space:nowrap}
+  .stat .l{font-size:12px;color:#9fb3d6;margin-top:2px}
   @media(max-width:720px){.stats{grid-template-columns:repeat(2,1fr)}.hero h1{font-size:34px}}
 
   /* ===== Cards / grids ===== */
@@ -154,12 +154,14 @@
   <div class="wrap">
     <span class="badge">Production · 사내 운영 중</span>
     <h1>사내 지식 기반 <span class="hl">RAG AI 어시스턴트</span><br>설계부터 운영까지 풀스택 단독 개발</h1>
-    <p>PostgreSQL · pgvector 하이브리드 검색과 Cross-encoder 리랭킹, 멀티모달 문서 처리(PDF·PPTX·Notion)를 결합해
+    <p>PostgreSQL · pgvector 하이브리드 검색과 Cross-encoder 리랭킹, 검색 실패를 스스로 보정하는 자기교정(Corrective RAG) 루프, 멀티모달 문서 처리(PDF·PPTX·Notion)를 결합해
        5개 업종 사내 지식을 답변하는 RAG 챗봇. 검색·생성 파이프라인부터 관리자 콘솔, 사용자 분석, 배포·운영까지 직접 구현했습니다.</p>
     <div class="stats">
       <div class="stat"><div class="n">5개 업종</div><div class="l">약국·병의원·학원·한의원·공통</div></div>
-      <div class="stat"><div class="n">하이브리드</div><div class="l">벡터 + 키워드 + 구문 + 리랭커</div></div>
-      <div class="stat"><div class="n">멀티모달</div><div class="l">PDF 비전 · PPTX · Notion</div></div>
+      <div class="stat"><div class="n">하이브리드</div><div class="l">벡터·키워드·구문·리랭커</div></div>
+      <div class="stat"><div class="n">멀티모달</div><div class="l">PDF 비전·PPTX·Notion</div></div>
+      <div class="stat"><div class="n">🔁 자기교정</div><div class="l">CRAG·검색 실패 자동 복구</div></div>
+      <div class="stat"><div class="n">🗄️ Tool Calling</div><div class="l">자연어 → POS DB 조회</div></div>
       <div class="stat"><div class="n">End-to-End</div><div class="l">검색·생성·관리자·분석·배포</div></div>
     </div>
   </div>
@@ -188,7 +190,7 @@
     <h2 class="title">핵심 기능</h2>
     <ul class="feat">
       <li><span class="k">🔍</span><div><b>하이브리드 검색 + 리랭킹</b> — pgvector 임베딩 검색 · 키워드(tsvector) · 구문 매칭 점수를 결합하고, bge-reranker Cross-encoder로 재정렬해 정확도 향상.</div></li>
-      <li><span class="k">🧠</span><div><b>LangGraph 대화 파이프라인</b> — 질문 분류 → 멀티턴 맥락 기반 질의 재작성("그거/아까" 해소) → 검색 → 근거 기반 프롬프트 생성을 그래프로 구성.</div></li>
+      <li><span class="k">🧠</span><div><b>LangGraph 자기교정 파이프라인</b> — 질문 분류 → 멀티턴 맥락 기반 질의 재작성("그거/아까" 해소) → 검색 → 근거 기반 프롬프트를 그래프로 구성. <b>검색 실패 시 조건을 완화해 재검색하는 Corrective RAG(CRAG) 루프</b>로 미응답을 자동 복구.</div></li>
       <li><span class="k">🖼️</span><div><b>멀티모달 문서 처리</b> — 이미지 위주 PDF는 Vision LLM으로 페이지를 읽어 설명+스크린샷 첨부, PPTX 슬라이드 추출, Notion DB 연동까지. 답변 본문 <b>사이사이에 관련 화면을 인라인 삽입</b>.</div></li>
       <li><span class="k">🔄</span><div><b>지식 소스 자동 동기화</b> — Notion 데이터베이스를 <code>last_edited_time</code> 기반 증분 동기화(변경 페이지만 재처리). 만료되는 이미지 URL은 자체 서버로 재호스팅.</div></li>
       <li><span class="k">🛠️</span><div><b>운영형 관리자 콘솔</b> — 문서 업로드/벡터화 파이프라인, 대화 히스토리, 미답변·수정요청 처리, 응답 규칙·검색어 매핑, LLM-as-Judge 평가 하베스트.</div></li>
@@ -267,6 +269,16 @@
   <div class="wrap">
     <div class="eyebrow">Engineering Highlights</div>
     <h2 class="title">문제 → 해결로 보는 기술 역량</h2>
+
+    <div class="hl-item">
+      <div class="tag">Self-Correcting RAG</div>
+      <h3>검색 실패를 스스로 복구하는 CRAG 루프</h3>
+      <div class="ps">
+        <div><b>문제</b>한 번 검색해 결과가 없으면 "정보 없음"으로 끝남. 특히 사용자가 업종(카테고리)을 잘못 고르면 답이 있는데도 못 찾음.</div>
+        <div><b>해결</b>LangGraph <b>조건부 엣지로 검색→재작성→검색 루프(cyclic graph)</b>를 구성해, 결과가 비면 <b>카테고리 조건을 완화해 재검색</b>(Corrective RAG). <b>결과가 있으면 재시도하지 않아 기존 검색은 무영향</b>, 최대 재시도로 무한루프 차단 · 환경변수 킬스위치 + 골든셋 회귀 검증으로 무중단 적용.</div>
+      </div>
+      <div class="res">→ 업종 오선택 등으로 못 찾던 질문을 자동 복구, 되던 검색은 100% 동일</div>
+    </div>
 
     <div class="hl-item">
       <div class="tag">Performance</div>
