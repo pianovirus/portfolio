@@ -27,3 +27,9 @@
 
 PostgreSQL · pgvector 하이브리드 검색 + Cross-encoder 리랭킹, 멀티모달 문서 처리(PDF·PPTX·Notion)를 결합한
 사내 RAG 챗봇. 검색·생성 파이프라인부터 관리자 콘솔 · 사용자 분석 · 배포까지 **풀스택 단독 개발**.
+
+---
+
+## 📦 통합 PDF (두 프로젝트 한 파일)
+
+📥 [**portfolio_combined.pdf**](https://github.com/pianovirus/portfolio/raw/main/portfolio_combined.pdf) — AI Pharm + RAG 챗봇 한 PDF (12p · 3.3MB · 북마크 포함)
