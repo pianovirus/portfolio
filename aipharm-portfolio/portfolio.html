@@ -377,6 +377,62 @@
     </div>
   </section>
 
+  <!-- 오픈소스 기여 -->
+  <section class="bg-white border-y border-slate-200 py-12">
+    <div class="max-w-6xl mx-auto px-6 md:px-10">
+      <div class="text-xs font-bold text-violet-600 uppercase tracking-widest mb-2">Open Source Contribution</div>
+      <h2 class="text-2xl font-extrabold tracking-tight mb-8">한국 헬스 AI 커뮤니티 기여</h2>
+
+      <div class="bg-gradient-to-br from-violet-50 to-pink-50 border-2 border-violet-200 rounded-2xl p-6 md:p-8">
+        <div class="flex items-start gap-4 mb-4">
+          <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-violet-500 to-pink-500 flex items-center justify-center text-white text-2xl shrink-0 shadow">
+            🌱
+          </div>
+          <div class="flex-1">
+            <div class="flex items-center gap-2 flex-wrap mb-1">
+              <h3 class="text-xl font-extrabold text-slate-800">kfda-mcp</h3>
+              <span class="text-xs font-bold px-2 py-0.5 rounded bg-violet-200 text-violet-800">Author</span>
+              <span class="text-xs font-bold px-2 py-0.5 rounded bg-emerald-100 text-emerald-700">MIT</span>
+              <span class="text-xs font-bold px-2 py-0.5 rounded bg-slate-200 text-slate-700">단독 개발</span>
+            </div>
+            <div class="text-sm text-slate-600 font-medium">
+              Korean MFDS MCP Server · 한국 식품의약품안전처 공공 OpenAPI MCP wrapper
+            </div>
+            <div class="text-xs text-slate-500 font-mono mt-1">
+              github.com/pianovirus/kfda-mcp
+            </div>
+          </div>
+        </div>
+
+        <p class="text-sm text-slate-700 leading-relaxed mb-4">
+          글로벌 MCP 생태계(BioMCP, Medical MCP 등)가 한국 식약처 데이터를 다루지 않는 점에 착안해,
+          한국 헬스케어 AI 커뮤니티의 미충족 영역을 해결하기 위해 단독 기획·개발한 오픈소스 MCP 서버입니다.
+          LLM 에이전트(Claude Desktop 등)가 한국 의약품 마스터·DUR 안전사용·e약은요 정보를
+          Anthropic MCP 표준 프로토콜로 자율 호출할 수 있습니다.
+        </p>
+
+        <div class="grid md:grid-cols-3 gap-3 text-xs">
+          <div class="bg-white rounded-lg p-3 border border-violet-200">
+            <div class="font-bold text-violet-700 mb-1">🛠 구현</div>
+            <div class="text-slate-600">Anthropic MCP Python SDK · 4개 tool · stdio server</div>
+          </div>
+          <div class="bg-white rounded-lg p-3 border border-violet-200">
+            <div class="font-bold text-violet-700 mb-1">🔌 통합 API</div>
+            <div class="text-slate-600">의약품 마스터 / DUR / e약은요 / 건기식(WIP)</div>
+          </div>
+          <div class="bg-white rounded-lg p-3 border border-violet-200">
+            <div class="font-bold text-violet-700 mb-1">📚 기여</div>
+            <div class="text-slate-600">한국 헬스 AI 첫 MCP 서버 · MIT License</div>
+          </div>
+        </div>
+
+        <div class="mt-4 text-xs text-slate-500 italic">
+          Stack: Python · Anthropic MCP SDK · httpx · python-dotenv
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- 푸터 -->
   <footer class="bg-slate-900 text-slate-300 py-10 mt-6">
     <div class="max-w-6xl mx-auto px-6 md:px-10">

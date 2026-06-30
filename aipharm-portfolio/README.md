@@ -159,6 +159,20 @@ LLM Provider 장애 시 자동 전환되는 Fallback Chain 구축.
 
 ---
 
+## 🌱 Open Source Contribution
+
+### [kfda-mcp](https://github.com/pianovirus/kfda-mcp) — Korean MFDS MCP Server
+한국 헬스케어 AI 커뮤니티 첫 MCP 서버 (Author, MIT, 단독 개발).
+
+글로벌 MCP 생태계(BioMCP, Medical MCP 등)가 한국 식약처 데이터를 다루지 않는 점에
+착안해, 한국 식품의약품안전처(MFDS) 공공 OpenAPI를 Anthropic MCP 프로토콜로 감싼
+오픈소스 서버를 단독 개발. LLM 에이전트(Claude Desktop 등)가 한국 의약품 마스터, DUR
+안전사용, e약은요 정보를 자율적으로 호출 가능.
+
+Stack: Python · Anthropic MCP SDK · httpx
+
+---
+
 ## 🛠 기술 스택
 
 `Python` · `FastAPI` · `MySQL` · `PooledDB` · `Jinja2`
