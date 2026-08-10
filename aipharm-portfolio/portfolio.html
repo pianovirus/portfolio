@@ -50,11 +50,14 @@
       .grain { background-image: none !important; }
       .absolute.-inset-6 { display: none !important; }
 
-      /* page-break 정밀 컨트롤 — 카드·섹션이 페이지 경계서 잘리지 않게 */
-      section, header, footer { page-break-inside: avoid; break-inside: avoid; }
+      /* page-break 정밀 컨트롤 — 카드는 잘리지 않게, 섹션은 자유롭게 분할 */
+      header, footer { page-break-inside: avoid; break-inside: avoid; }
+      section { page-break-inside: auto; break-inside: auto; }
       h1, h2 { page-break-after: avoid; break-after: avoid; }
       .stat-card, .bg-white.rounded-2xl, .rounded-2xl.border { page-break-inside: avoid; break-inside: avoid; }
       .grid > div { page-break-inside: avoid; break-inside: avoid; }
+      .arch-figure { page-break-inside: avoid; break-inside: avoid; page-break-before: auto; }
+      .arch-figure img { max-height: 240mm; width: auto !important; max-width: 100%; margin-left: auto; margin-right: auto; }
       footer { page-break-before: auto; }
     }
   </style>
@@ -181,7 +184,15 @@
       <div class="text-xs font-bold text-indigo-600 uppercase tracking-widest mb-2">Architecture</div>
       <h2 class="text-2xl font-extrabold tracking-tight mb-8">시스템 아키텍처</h2>
 
-      <div class="bg-slate-50 border border-slate-200 rounded-xl p-8 mb-7">
+      <!-- 전체 파이프라인 다이어그램 (메인) -->
+      <figure class="arch-figure bg-white border border-slate-200 rounded-xl p-4 md:p-6 shadow-sm mb-7">
+        <img src="./portfolio_assets/system_architecture.png"
+             alt="AI Pharm 시스템 아키텍처 다이어그램 — 입력(POS 구조화 처방전) → Backend Pipeline 6단계 → 멀티 디바이스 출력 · 하단 핵심 AI 스택 + 외부 OPENAPI/MCP 도구 + 내부 지식 DB"
+             class="w-full h-auto rounded-lg" style="display: block;">
+      </figure>
+
+      <!-- 3-layer 요약 카드 -->
+      <div class="bg-slate-50 border border-slate-200 rounded-xl p-8">
         <div class="grid md:grid-cols-3 gap-5 text-sm">
           <div class="bg-white rounded-lg p-4 border border-sky-200">
             <div class="text-xs font-bold text-sky-700 uppercase tracking-wider mb-2">📥 Input Layer</div>
@@ -196,7 +207,6 @@
             <div class="text-slate-700 leading-relaxed">표준 응답 → 멀티 디바이스 (태블릿 · POS · 결제 채널 · 모바일) 별 layout 으로 노출</div>
           </div>
         </div>
-        <div class="text-center text-xs text-slate-500 mt-5 italic">※ 상세 알고리즘 다이어그램은 면접 시 직접 시연합니다 (출원·등록 특허 보호 영역)</div>
       </div>
 
     </div>
